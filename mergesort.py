@@ -43,16 +43,17 @@ def merge_sort(list):
 
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 # initialize list
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-# get array with [0, 1, ..., len(my_list)]
-x = range(len(my_list))
-# plot
-plt.plot(x, my_list)
-plt.show()
-# use merge_sort
-merge_sort(my_list)
-# plot
-plt.plot(x, my_list)
+x = np.array(range(len(my_list)))
+
+plt.figure()
+plt.bar(x-0.15, my_list, color='red', alpha=0.5, label="unsorted", width=0.3)
+mergeSort(my_list)
+plt.bar(x+0.15, my_list, color='green', alpha=0.5, label="sorted", width=0.3)
+plt.legend()
+plt.xlabel("Position within list")
+>>>>>>> master
 plt.show()
