@@ -55,5 +55,4 @@ mergeSort(my_list)
 plt.bar(x+0.15, my_list, color='green', alpha=0.5, label="sorted", width=0.3)
 plt.legend()
 plt.xlabel("Position within list")
->>>>>>> master
 plt.show()
